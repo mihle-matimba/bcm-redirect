@@ -2,5 +2,13 @@
   "rewrites": [
     { "source": "/register", "destination": "/register/index.html" },
     { "source": "/login", "destination": "/login/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
+      ]
+    }
   ]
 }
