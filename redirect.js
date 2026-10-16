@@ -2,8 +2,8 @@
   var BASE = "https://register.blackcrownmarkets.com";
   var DELAY_MS = 2500;
 
-  // /login goes to the new login page; everything else goes to register.
-  var path = /^\/login\/?$/.test(window.location.pathname) ? "/login" : "/register";
+  // /register goes to register; the base URL and /login go to login.
+  var path = /^\/register\/?$/.test(window.location.pathname) ? "/register" : "/login";
 
   // Forward exactly what the visitor's URL has: their query string and hash,
   // or nothing at all if there are none. Nothing is stored or added.
